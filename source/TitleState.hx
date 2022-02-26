@@ -11,7 +11,7 @@ import polymod.Polymod.PolymodError;
 
 import flixel.FlxState;
 
-class TitleState extends FlxState
+class TitleState extends FrameState
 {
 	override public function create()
 	{
