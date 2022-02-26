@@ -33,9 +33,9 @@ class Main extends Sprite
 
 	function setupGame():Void
 	{
-		addChild(new FlxGame(0, 0, initState, 1, 60, 60, true, true));
-
 		trace('Running version: ' + Application.current.meta.get('version'));
+		
+		addChild(new FlxGame(0, 0, initState, 1, 60, 60, true, true));
 
 		#if !mobile
 		fpsVar = new FPS(10, 3, 0xFFFFFF);

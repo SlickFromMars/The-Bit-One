@@ -1,0 +1,8 @@
+grp_name # Flippers
+grp_weight # 4
+grp_rodLevel # 1
+
+Common Flipper::flipper_or::1::5
+Earth Flipper::flipper_gr::2::4
+Blood Flipper::flipper_re::3::2
+Shadow Flipper::flipper_sh::3::1

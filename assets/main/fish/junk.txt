@@ -1,0 +1,6 @@
+grp_name # Junk
+grp_weight # 1
+grp_rodLevel # 1
+
+Normal Rock::rock::1::10
+Special Rock::cooler_rock::5::1

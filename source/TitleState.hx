@@ -1,5 +1,14 @@
 package;
 
+#if sys
+import sys.FileSystem;
+#end
+
+#if MODS_ALLOWED
+import polymod.Polymod.Framework;
+import polymod.Polymod.PolymodError;
+#end
+
 import flixel.FlxState;
 
 class TitleState extends FlxState
@@ -30,11 +39,13 @@ class TitleState extends FlxState
 			frameworkParams: {
 				assetLibraryPaths: [
 					"data" => "data", "images" => "images", "music" => "music",
-					"sounds" => "sounds", "dynamic" => "dynamic", "fonts" => "fonts", "config" => "config"
+					"sounds" => "sounds", "dynamic" => "dynamic", "fonts" => "fonts", "fish" => "fish"
 				]
 			}
 		});
 		#end
+
+		FishingData.reloadFishList();
 		
 		super.create();
 	}
