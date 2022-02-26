@@ -2,11 +2,11 @@ package;
 
 import openfl.Assets;
 import flixel.FlxG;
-import openfl.events.Event;
-import openfl.events.IOErrorEvent;
-import openfl.net.FileReference;
 import haxe.Json;
 #if sys
+import openfl.events.Event;
+import openfl.events.IOErrorEvent;
+import openfl.net.FileReference;s
 import sys.io.File;
 import sys.FileSystem;
 #end
@@ -119,7 +119,7 @@ class FishingData
         return null;
     }
 
-    private static var _file:FileReference;
+    #if sys private static var _file:FileReference; #end
 
     static function formatToJson(data:FishClass):Void {
         trace('The file for ' + data.name + ' was stored as a text file. It will be reformatted.');
@@ -139,6 +139,7 @@ class FishingData
         #end
     }
 
+    #if sys
     private static function onSaveComplete(_):Void
 	{
 		_file.removeEventListener(Event.COMPLETE, onSaveComplete);
@@ -170,4 +171,5 @@ class FishingData
 		_file = null;
 		FlxG.log.error("Problem saving file");
 	}
+    #end
 }
